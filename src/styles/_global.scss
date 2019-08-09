@@ -1,0 +1,35 @@
+// global
+
+.main-chat-app--navigation {
+  height: 100%;
+  width: 70px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+  .navigation--list-item {
+    // padding: 6px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+}
+
+.main-chat-app--components {
+  margin: 40px 40px 40px 130px;
+}
+
+@media screen and (max-height: 450px) {
+  .main-chat-app--navigation {
+    padding-top: 15px;
+
+    .navigation--list-item {
+      font-size: 18px;
+    }
+  }
+}
