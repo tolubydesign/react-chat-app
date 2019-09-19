@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ButtonComponent from './button';
 import SearchBarComponent from './searchbar';
+import ChatChannel from './chat-channel';
 
 export default class Home extends Component {
   render() {
@@ -14,7 +15,19 @@ export default class Home extends Component {
 
     return (
       <div>
-        <SearchBarComponent />
+        <div className='homepage--page-header'>
+          <div className='searchbar-component--wrapper'>
+            <SearchBarComponent />
+          </div>
+          <div className='filter-component--wrapper'>
+            filter -
+          </div>
+        </div>
+        {/* table of chat channels */}
+        <div className='chat-channel-component--wrapper'>
+          <ChatChannel />
+        </div>
+
         <ButtonComponent button={button} />
 
         {/* {items}
