@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Search } from '../assets/images/icons/search.svg'
+// import { ReactComponent as Search } from '../assets/images/icons/search.svg'
 // 'react-router-dom'
 
 import { fade, makeStyles } from '@material-ui/core/styles';

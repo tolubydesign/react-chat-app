@@ -1,9 +1,11 @@
 import React from 'react';
 // import logo from '../logo.svg';
 // import home_svg from '../assets/feather/home.svg'
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from './components/main'
 import Settings from './components/settings'
+import DirectMessage from './components/direct-message'
 import Notfound from './components/notfound'
 import Navigation from './components/navigation';
 
@@ -18,6 +20,7 @@ export default function AppComponent() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/settings/" component={Settings} />
+            <Route path="/direct-message/" component={DirectMessage} />
             <Route component={Notfound} />
           </Switch>
         </div>

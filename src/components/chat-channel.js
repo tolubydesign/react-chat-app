@@ -1,3 +1,4 @@
+// /* eslint-disable no-unused-vars */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -7,12 +8,13 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 /** chips */
-import Avatar from '@material-ui/core/Avatar';
+// import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
-import FaceIcon from '@material-ui/icons/Face';
-import DoneIcon from '@material-ui/icons/Done';
+// import FaceIcon from '@material-ui/icons/Face';
+// import DoneIcon from '@material-ui/icons/Done';
 /** data */
 import { rows } from './services/chat-data';
+
 
 const tableStyling = makeStyles(theme => ({
   root: {
@@ -30,13 +32,13 @@ const tableStyling = makeStyles(theme => ({
 export default function SimpleTable() {
   const classes = tableStyling();
 
-  function handleDelete() {
-    alert('You clicked the delete icon.');
-  }
+  // function handleDelete() {
+  //   alert('You clicked the delete icon.');
+  // }
 
-  function handleClick() {
-    alert('You clicked the Chip.');
-  }
+  // function handleClick() {
+  //   alert('You clicked the Chip.');
+  // }
   return (
     <div className={classes.root}>
 
@@ -45,10 +47,10 @@ export default function SimpleTable() {
           <TableHead>
             <TableRow>
               <TableCell>Chats</TableCell>
-              <TableCell align="right">Users</TableCell>
-              <TableCell align="right">Type</TableCell>
-              <TableCell align="right">Topic</TableCell>
-              <TableCell align="right">Recent Message</TableCell>
+              <TableCell align="right">Users &nbsp</TableCell>
+              <TableCell align="right">Type &nbsp</TableCell>
+              <TableCell align="right">Topic &nbsp</TableCell>
+              <TableCell align="right">Recent Message &nbsp</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -57,7 +59,9 @@ export default function SimpleTable() {
                 <TableCell component="th" scope="row">{row.chats}</TableCell>
                 <TableCell align="right">{row.users}</TableCell>
                 <TableCell align="right">{row.securityType}</TableCell>
-                <TableCell align="right"><Chip label={row.topic} variant="outlined" color="primary" /></TableCell>
+                <TableCell align="right">
+                  <Chip label={row.topic} variant="outlined" color={row.colour} />
+                </TableCell>
                 <TableCell align="right">{row.message}</TableCell>
               </TableRow>
             ))}

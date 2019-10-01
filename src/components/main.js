@@ -8,7 +8,7 @@ export default class Home extends Component {
     const button = 'Start Chat';
     const elements = ['one', 'two', 'three'];
     const items = [];
-    const secondArray = ['four', 'five', 'six'];
+    // const secondArray = ['four', 'five', 'six'];
     for (const [index, value] of elements.entries()) {
       items.push(<li key={index}>{value}</li>)
     }
